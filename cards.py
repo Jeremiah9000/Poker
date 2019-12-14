@@ -1,5 +1,7 @@
 import random
-
+from values_suits import (
+    VALUES
+   ,SUITS)
 
 class Card(object):
     def __init__(self, value, suit):
@@ -9,15 +11,15 @@ class Card(object):
     def __repr__(self):
         value_name = ""
         suit_name = ""
-        values = dict(zip(range(13), ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace']))
-        suits = dict(zip(range(4), ['Spades', 'Diamonds', 'Clubs', 'Herts']))
+        values_dict = dict(zip(range(len(VALUES)), VALUES))
+        suits_dict = dict(zip(range(len(SUITS)), SUITS))
 
-        for key in values:
+        for key in values_dict:
             if self.value ==  key:
-                value_name = values[key]
-        for key in suits:
+                value_name = values_dict[key]
+        for key in suits_dict:
             if self.suit == key:
-                suit_name = suits[key]
+                suit_name = suits_dict[key]
         return value_name + " of " + suit_name
 
 

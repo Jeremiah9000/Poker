@@ -5,28 +5,10 @@ from unittest import (
 
 from cards import (
     Card
+   ,VALUES
+   ,SUITS
 )
 
-VALUES = ("Two",
-    "Three",
-    "Four",
-    "Five",
-    "Six",
-    "Seven",
-    "Eight",
-    "Nine",
-    "Ten",
-    "Jack",
-    "Queen",
-    "King",
-    "Ace",
-)
-
-SUITS = ("Spades",
-    "Diamonds",
-    "Clubs",
-    "Hearts",
-)
 
 class TestCards(TestCase):
     def test_cards_repr(self):
